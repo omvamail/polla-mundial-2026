@@ -4,9 +4,11 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 
+# Usar rutas absolutas para que funcione desde cualquier carpeta
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PASSWORD_ADMIN = "mundial2026"
-DATA_FILENAME = os.path.join('static', 'data.json')
-SCORES_FILENAME = "scores.json"
+DATA_FILENAME = os.path.join(BASE_DIR, 'static', 'data.json')
+SCORES_FILENAME = os.path.join(BASE_DIR, "scores.json")
 
 def load_scores():
     if not os.path.exists(SCORES_FILENAME):
