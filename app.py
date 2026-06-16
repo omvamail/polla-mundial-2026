@@ -1,5 +1,7 @@
 import os
 import json
+import base64
+import requests
 from flask import Flask, jsonify, request
 
 app = Flask(__name__, static_folder='static', static_url_path='')
@@ -10,7 +12,13 @@ PASSWORD_ADMIN = "mundial2026"
 DATA_FILENAME = os.path.join(BASE_DIR, 'static', 'data.json')
 SCORES_FILENAME = os.path.join(BASE_DIR, "scores.json")
 
-# Crear scores.json vacío si no existe (para que funcione en despliegues nuevos)
+# GitHub API para persistencia de resultados (opcional, no requiere cuenta extra)
+GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '')
+GITHUB_REPO = "omvamail/polla-mundial-2026"
+GITHUB_PATH = "scores.json"
+GITHUB_API = f"https://api.github.com/repos/{GITHUB_REPO}/contents/{GITHUB_PATH}"
+
+# Crear scores.json vacío si no existe
 if not os.path.exists(SCORES_FILENAME):
     try:
         with open(SCORES_FILENAME, 'w', encoding='utf-8') as f:
@@ -19,21 +27,65 @@ if not os.path.exists(SCORES_FILENAME):
         pass
 
 def load_scores():
-    if not os.path.exists(SCORES_FILENAME):
-        return {}
-    try:
-        with open(SCORES_FILENAME, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except Exception:
-        return {}
+    # Intenta leer desde GitHub (tiene la version mas reciente)
+    if GITHUB_TOKEN:
+        try:
+            resp = requests.get(GITHUB_API, headers={'Authorization': f'token {GITHUB_TOKEN}'}, timeout=10)
+            if resp.status_code == 200:
+                content = base64.b64decode(resp.json()['content']).decode('utf-8')
+                data = json.loads(content)
+                # Guardar copia local para respaldo
+                with open(SCORES_FILENAME, 'w', encoding='utf-8') as f:
+                    json.dump(data, f, indent=4, ensure_ascii=False)
+                return data
+        except Exception:
+            pass
+
+    # Fallback: leer archivo local
+    if os.path.exists(SCORES_FILENAME):
+        try:
+            with open(SCORES_FILENAME, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
 
 def save_scores(scores):
+    local_ok = False
+
+    # Guardar local primero
     try:
         with open(SCORES_FILENAME, 'w', encoding='utf-8') as f:
             json.dump(scores, f, indent=4, ensure_ascii=False)
-        return True
+        local_ok = True
     except Exception:
-        return False
+        pass
+
+    # Sincronizar con GitHub
+    if GITHUB_TOKEN:
+        try:
+            # Obtener SHA del archivo actual (necesario para actualizar)
+            resp = requests.get(GITHUB_API, headers={'Authorization': f'token {GITHUB_TOKEN}'}, timeout=10)
+            sha = resp.json().get('sha') if resp.status_code == 200 else None
+
+            content_bytes = json.dumps(scores, indent=4, ensure_ascii=False).encode('utf-8')
+
+            put_data = {
+                'message': 'Actualizar marcadores [auto]',
+                'content': base64.b64encode(content_bytes).decode('utf-8'),
+            }
+            if sha:
+                put_data['sha'] = sha
+
+            resp = requests.put(GITHUB_API,
+                headers={'Authorization': f'token {GITHUB_TOKEN}'},
+                json=put_data, timeout=15)
+
+            return resp.status_code in (200, 201)
+        except Exception:
+            return local_ok
+
+    return local_ok
 
 def load_quiniela_data():
     if not os.path.exists(DATA_FILENAME):
