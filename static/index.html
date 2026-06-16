@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quiniela Mundial 2026</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- App Container -->
+    <div class="app-container">
+        <!-- Toast Notification -->
+        <div id="toast-container" class="toast-container"></div>
+
+        <!-- App Header -->
+        <header class="app-header">
+            <div class="header-logo">
+                <i class="fa-solid fa-trophy header-trophy"></i>
+                <h1>Polla Mundialista 2026</h1>
+            </div>
+            <div id="header-stats" class="header-stats">Fase de Grupos</div>
+        </header>
+
+        <!-- Main Content (Scrollable Area) -->
+        <main class="app-content">
+            <!-- TAB 1: STANDINGS -->
+            <section id="tab-standings" class="tab-panel active">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">Tabla de Posiciones</h2>
+                    <span class="badge badge-glow">Grupo</span>
+                </div>
+                
+                <!-- Standings List -->
+                <div id="leaderboard-list" class="leaderboard-list">
+                    <!-- Dynamic Content -->
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Cargando tabla...
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: MATCHES -->
+            <section id="tab-matches" class="tab-panel">
+                <!-- Matches View Selector (Por Grupos vs Por Fechas) -->
+                <div class="matches-view-selector">
+                    <button class="view-btn active" id="view-by-group-btn">
+                        <i class="fa-solid fa-folder"></i> Por Grupos
+                    </button>
+                    <button class="view-btn" id="view-by-date-btn">
+                        <i class="fa-solid fa-calendar-days"></i> Por Fechas
+                    </button>
+                </div>
+
+                <!-- Group Tabs (Horizontal Scroll) -->
+                <div class="group-tabs-container" id="group-tabs-nav-container">
+                    <div class="group-tabs" id="group-tabs-list">
+                        <!-- Dynamic Group Tabs (A-L) -->
+                    </div>
+                </div>
+
+                <!-- Date Tabs (Horizontal Scroll) -->
+                <div class="group-tabs-container hidden" id="date-tabs-nav-container">
+                    <div class="group-tabs" id="date-tabs-list">
+                        <!-- Dynamic Date Pills -->
+                    </div>
+                </div>
+
+                <!-- Matches Fixture List -->
+                <div id="matches-list" class="matches-list">
+                    <!-- Dynamic Content -->
+                    <div class="loading-spinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Cargando encuentros...
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 3: ADMIN -->
+            <section id="tab-admin" class="tab-panel">
+                <!-- Login Form -->
+                <div id="admin-login-card" class="admin-card glass-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-lock-open"></i>
+                    </div>
+                    <h3>Panel de Administración</h3>
+                    <p>Ingresa la clave para actualizar los marcadores reales de los partidos.</p>
+                    
+                    <div class="input-group">
+                        <i class="fa-solid fa-key input-icon"></i>
+                        <input type="password" id="admin-password" placeholder="Contraseña de Administrador">
+                    </div>
+                    
+                    <button id="btn-admin-login" class="btn btn-primary btn-block">
+                        Acceder <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </button>
+                </div>
+
+                <!-- Admin Dashboard (Hidden initially) -->
+                <div id="admin-dashboard" class="admin-dashboard hidden">
+                    <div class="admin-dashboard-header glass-card">
+                        <div class="admin-info">
+                            <i class="fa-solid fa-user-gear"></i>
+                            <span>Admin Autenticado</span>
+                        </div>
+                        <button id="btn-admin-logout" class="btn btn-danger btn-sm">
+                            Salir <i class="fa-solid fa-sign-out-alt"></i>
+                        </button>
+                    </div>
+
+                    <!-- Admin Filters -->
+                    <div class="admin-filters">
+                        <div class="search-input-group">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="admin-search-team" placeholder="Buscar por equipo...">
+                        </div>
+                        <select id="admin-filter-status" class="select-style">
+                            <option value="all">Todos los partidos</option>
+                            <option value="pending">Pendientes</option>
+                            <option value="played">Finalizados</option>
+                        </select>
+                    </div>
+
+                    <!-- Admin Match List -->
+                    <div id="admin-matches-list" class="matches-list">
+                        <!-- Dynamic Admin Content -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Player Details Modal (Dynamic Overlay) -->
+        <div id="player-modal" class="modal-overlay hidden">
+            <div class="modal-card glass-card animate-slide-up">
+                <div class="modal-header">
+                    <div class="player-modal-profile">
+                        <div id="modal-player-avatar" class="modal-avatar"></div>
+                        <div class="player-modal-meta">
+                            <h3 id="modal-player-name">Player Name</h3>
+                            <span id="modal-player-points" class="player-points-badge">0 PTS</span>
+                        </div>
+                    </div>
+                    <button id="btn-close-modal" class="btn-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-stats-grid">
+                    <div class="modal-stat-card bg-success-dim">
+                        <span class="stat-num text-success" id="modal-stat-correct">0</span>
+                        <span class="stat-label">Acertados</span>
+                    </div>
+                    <div class="modal-stat-card bg-danger-dim">
+                        <span class="stat-num text-danger" id="modal-stat-incorrect">0</span>
+                        <span class="stat-label">Fallados</span>
+                    </div>
+                    <div class="modal-stat-card bg-neutral-dim">
+                        <span class="stat-num text-neutral" id="modal-stat-pending">0</span>
+                        <span class="stat-label">Pendientes</span>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Predicciones Detalladas</h4>
+                    <div class="predictions-filter-bar">
+                        <select id="modal-group-filter" class="select-style-sm">
+                            <option value="all">Todos los grupos</option>
+                            <!-- Dynamic group options -->
+                        </select>
+                        <select id="modal-status-filter" class="select-style-sm">
+                            <option value="all">Todas las predicciones</option>
+                            <option value="correct">Acertadas 🟢</option>
+                            <option value="incorrect">Falladas 🔴</option>
+                            <option value="pending">Pendientes ⚪</option>
+                        </select>
+                    </div>
+                    <div id="modal-predictions-list" class="modal-predictions-list">
+                        <!-- Dynamic list of predictions -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="app-nav">
+            <button class="nav-btn active" data-tab="tab-standings">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Posiciones</span>
+            </button>
+            <button class="nav-btn" data-tab="tab-matches">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Partidos</span>
+            </button>
+            <button class="nav-btn" data-tab="tab-admin">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>Administrar</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Main JS -->
+    <script src="app.js" defer></script>
+</body>
+</html>

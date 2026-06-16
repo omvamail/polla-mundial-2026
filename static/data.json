@@ -1,0 +1,1154 @@
+[
+    {
+        "row": 2,
+        "group": "A",
+        "local": "México",
+        "visitante": "Sudáfrica",
+        "date": "2026-06-11",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 3,
+        "group": "A",
+        "local": "Corea del Sur",
+        "visitante": "República Checa",
+        "date": "2026-06-11",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 4,
+        "group": "A",
+        "local": "República Checa",
+        "visitante": "Sudáfrica",
+        "date": "2026-06-17",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 5,
+        "group": "A",
+        "local": "México",
+        "visitante": "Corea del Sur",
+        "date": "2026-06-17",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 6,
+        "group": "A",
+        "local": "República Checa",
+        "visitante": "México",
+        "date": "2026-06-23",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 7,
+        "group": "A",
+        "local": "Sudáfrica",
+        "visitante": "Corea del Sur",
+        "date": "2026-06-23",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 9,
+        "group": "B",
+        "local": "Canadá",
+        "visitante": "Bosnia",
+        "date": "2026-06-11",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 10,
+        "group": "B",
+        "local": "Catar",
+        "visitante": "Suiza",
+        "date": "2026-06-11",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 11,
+        "group": "B",
+        "local": "Suiza",
+        "visitante": "Bosnia",
+        "date": "2026-06-17",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 12,
+        "group": "B",
+        "local": "Canadá",
+        "visitante": "Catar",
+        "date": "2026-06-17",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 13,
+        "group": "B",
+        "local": "Suiza",
+        "visitante": "Canadá",
+        "date": "2026-06-23",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 14,
+        "group": "B",
+        "local": "Bosnia",
+        "visitante": "Catar",
+        "date": "2026-06-23",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 16,
+        "group": "C",
+        "local": "Brasil",
+        "visitante": "Marruecos",
+        "date": "2026-06-12",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 17,
+        "group": "C",
+        "local": "Haití",
+        "visitante": "Escocia",
+        "date": "2026-06-12",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 18,
+        "group": "C",
+        "local": "Escocia",
+        "visitante": "Marruecos",
+        "date": "2026-06-18",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Empate (E)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 19,
+        "group": "C",
+        "local": "Brasil",
+        "visitante": "Haití",
+        "date": "2026-06-18",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 20,
+        "group": "C",
+        "local": "Escocia",
+        "visitante": "Brasil",
+        "date": "2026-06-24",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 21,
+        "group": "C",
+        "local": "Marruecos",
+        "visitante": "Haití",
+        "date": "2026-06-24",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 23,
+        "group": "D",
+        "local": "Estados Unidos",
+        "visitante": "Paraguay",
+        "date": "2026-06-12",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 24,
+        "group": "D",
+        "local": "Australia",
+        "visitante": "Turquía",
+        "date": "2026-06-12",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 25,
+        "group": "D",
+        "local": "Turquía",
+        "visitante": "Paraguay",
+        "date": "2026-06-18",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 26,
+        "group": "D",
+        "local": "Estados Unidos",
+        "visitante": "Australia",
+        "date": "2026-06-18",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 27,
+        "group": "D",
+        "local": "Turquía",
+        "visitante": "Estados Unidos",
+        "date": "2026-06-24",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 28,
+        "group": "D",
+        "local": "Paraguay",
+        "visitante": "Australia",
+        "date": "2026-06-24",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Empate (E)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 30,
+        "group": "E",
+        "local": "Alemania",
+        "visitante": "Curazao",
+        "date": "2026-06-13",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 31,
+        "group": "E",
+        "local": "Costa de Marfil",
+        "visitante": "Ecuador",
+        "date": "2026-06-13",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 32,
+        "group": "E",
+        "local": "Ecuador",
+        "visitante": "Curazao",
+        "date": "2026-06-19",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 33,
+        "group": "E",
+        "local": "Alemania",
+        "visitante": "Costa de Marfil",
+        "date": "2026-06-19",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 34,
+        "group": "E",
+        "local": "Ecuador",
+        "visitante": "Alemania",
+        "date": "2026-06-25",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 35,
+        "group": "E",
+        "local": "Curazao",
+        "visitante": "Costa de Marfil",
+        "date": "2026-06-25",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 37,
+        "group": "F",
+        "local": "Países Bajos",
+        "visitante": "Japón",
+        "date": "2026-06-13",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 38,
+        "group": "F",
+        "local": "Suecia",
+        "visitante": "Túnez",
+        "date": "2026-06-13",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 39,
+        "group": "F",
+        "local": "Túnez",
+        "visitante": "Japón",
+        "date": "2026-06-19",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 40,
+        "group": "F",
+        "local": "Países Bajos",
+        "visitante": "Suecia",
+        "date": "2026-06-19",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 41,
+        "group": "F",
+        "local": "Túnez",
+        "visitante": "Países Bajos",
+        "date": "2026-06-25",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 42,
+        "group": "F",
+        "local": "Japón",
+        "visitante": "Suecia",
+        "date": "2026-06-25",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 44,
+        "group": "G",
+        "local": "Bélgica",
+        "visitante": "Egipto",
+        "date": "2026-06-14",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 45,
+        "group": "G",
+        "local": "Irán",
+        "visitante": "Nueva Zelanda",
+        "date": "2026-06-14",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 46,
+        "group": "G",
+        "local": "Nueva Zelanda",
+        "visitante": "Egipto",
+        "date": "2026-06-20",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 47,
+        "group": "G",
+        "local": "Bélgica",
+        "visitante": "Irán",
+        "date": "2026-06-20",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 48,
+        "group": "G",
+        "local": "Nueva Zelanda",
+        "visitante": "Bélgica",
+        "date": "2026-06-26",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 49,
+        "group": "G",
+        "local": "Egipto",
+        "visitante": "Irán",
+        "date": "2026-06-26",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 51,
+        "group": "H",
+        "local": "España",
+        "visitante": "Cabo Verde",
+        "date": "2026-06-14",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 52,
+        "group": "H",
+        "local": "Arabia Saudita",
+        "visitante": "Uruguay",
+        "date": "2026-06-14",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 53,
+        "group": "H",
+        "local": "Uruguay",
+        "visitante": "Cabo Verde",
+        "date": "2026-06-20",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 54,
+        "group": "H",
+        "local": "España",
+        "visitante": "Arabia Saudita",
+        "date": "2026-06-20",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 55,
+        "group": "H",
+        "local": "Uruguay",
+        "visitante": "España",
+        "date": "2026-06-26",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 56,
+        "group": "H",
+        "local": "Cabo Verde",
+        "visitante": "Arabia Saudita",
+        "date": "2026-06-26",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 58,
+        "group": "I",
+        "local": "Francia",
+        "visitante": "Senegal",
+        "date": "2026-06-15",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 59,
+        "group": "I",
+        "local": "Irak",
+        "visitante": "Noruega",
+        "date": "2026-06-15",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 60,
+        "group": "I",
+        "local": "Noruega",
+        "visitante": "Senegal",
+        "date": "2026-06-21",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 61,
+        "group": "I",
+        "local": "Francia",
+        "visitante": "Irak",
+        "date": "2026-06-21",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 62,
+        "group": "I",
+        "local": "Noruega",
+        "visitante": "Francia",
+        "date": "2026-06-27",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 63,
+        "group": "I",
+        "local": "Senegal",
+        "visitante": "Irak",
+        "date": "2026-06-27",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 65,
+        "group": "J",
+        "local": "Argentina",
+        "visitante": "Argelia",
+        "date": "2026-06-15",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 66,
+        "group": "J",
+        "local": "Austria",
+        "visitante": "Jordania",
+        "date": "2026-06-15",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 67,
+        "group": "J",
+        "local": "Jordania",
+        "visitante": "Argelia",
+        "date": "2026-06-21",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 68,
+        "group": "J",
+        "local": "Argentina",
+        "visitante": "Austria",
+        "date": "2026-06-21",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 69,
+        "group": "J",
+        "local": "Jordania",
+        "visitante": "Argentina",
+        "date": "2026-06-27",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 70,
+        "group": "J",
+        "local": "Argelia",
+        "visitante": "Austria",
+        "date": "2026-06-27",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 72,
+        "group": "K",
+        "local": "Portugal",
+        "visitante": "RD del Congo",
+        "date": "2026-06-16",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 73,
+        "group": "K",
+        "local": "Uzbekistán",
+        "visitante": "Colombia",
+        "date": "2026-06-16",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 74,
+        "group": "K",
+        "local": "Colombia",
+        "visitante": "RD del Congo",
+        "date": "2026-06-22",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 75,
+        "group": "K",
+        "local": "Portugal",
+        "visitante": "Uzbekistán",
+        "date": "2026-06-22",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 76,
+        "group": "K",
+        "local": "Colombia",
+        "visitante": "Portugal",
+        "date": "2026-06-28",
+        "time": "12:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 77,
+        "group": "K",
+        "local": "RD del Congo",
+        "visitante": "Uzbekistán",
+        "date": "2026-06-28",
+        "time": "15:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 79,
+        "group": "L",
+        "local": "Inglaterra",
+        "visitante": "Croacia",
+        "date": "2026-06-16",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Empate (E)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Empate (E)"
+        }
+    },
+    {
+        "row": 80,
+        "group": "L",
+        "local": "Ghana",
+        "visitante": "Panamá",
+        "date": "2026-06-16",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 81,
+        "group": "L",
+        "local": "Panamá",
+        "visitante": "Croacia",
+        "date": "2026-06-22",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Gana Visitante (V)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 82,
+        "group": "L",
+        "local": "Inglaterra",
+        "visitante": "Ghana",
+        "date": "2026-06-22",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Gana Local (L)",
+            "Cesar": "Gana Local (L)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    },
+    {
+        "row": 83,
+        "group": "L",
+        "local": "Panamá",
+        "visitante": "Inglaterra",
+        "date": "2026-06-28",
+        "time": "18:00",
+        "predictions": {
+            "Deivid": "Gana Visitante (V)",
+            "Cesar": "Gana Visitante (V)",
+            "Ferney": "Gana Visitante (V)",
+            "Edisabet": "Gana Visitante (V)",
+            "Jhair": "Empate (E)",
+            "Duvan": "Gana Visitante (V)"
+        }
+    },
+    {
+        "row": 84,
+        "group": "L",
+        "local": "Croacia",
+        "visitante": "Ghana",
+        "date": "2026-06-28",
+        "time": "21:00",
+        "predictions": {
+            "Deivid": "Empate (E)",
+            "Cesar": "Empate (E)",
+            "Ferney": "Gana Local (L)",
+            "Edisabet": "Gana Local (L)",
+            "Jhair": "Gana Local (L)",
+            "Duvan": "Gana Local (L)"
+        }
+    }
+]
