@@ -3,6 +3,9 @@ venv/
 __pycache__/
 *.pyc
 
+# Resultados (se generan solos al guardar)
+scores.json
+
 # Excel (es backup manual, no parte del código)
 *.xlsx
 

@@ -10,6 +10,14 @@ PASSWORD_ADMIN = "mundial2026"
 DATA_FILENAME = os.path.join(BASE_DIR, 'static', 'data.json')
 SCORES_FILENAME = os.path.join(BASE_DIR, "scores.json")
 
+# Crear scores.json vacío si no existe (para que funcione en despliegues nuevos)
+if not os.path.exists(SCORES_FILENAME):
+    try:
+        with open(SCORES_FILENAME, 'w', encoding='utf-8') as f:
+            json.dump({}, f)
+    except Exception:
+        pass
+
 def load_scores():
     if not os.path.exists(SCORES_FILENAME):
         return {}
