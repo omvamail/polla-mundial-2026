@@ -157,6 +157,14 @@ def load_quiniela_data():
         
     # Sort leaderboard: points desc, correct desc, name asc
     leaderboard.sort(key=lambda x: (-x['points'], -x['correct'], x['name']))
+
+    # Calcular posiciones respetando empates
+    # Si dos tienen los mismos puntos, comparten la misma posición
+    for i, player in enumerate(leaderboard):
+        if i > 0 and player['points'] == leaderboard[i - 1]['points']:
+            player['position'] = leaderboard[i - 1]['position']
+        else:
+            player['position'] = i + 1
     
     # Sort matches: date asc, time asc, row asc
     matches.sort(key=lambda x: (x.get('date', ''), x.get('time', ''), x['row']))

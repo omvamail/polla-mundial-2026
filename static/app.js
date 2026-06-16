@@ -233,7 +233,7 @@ function renderStandings() {
     }
 
     quinielaData.leaderboard.forEach((player, index) => {
-        const rank = index + 1;
+        const rank = player.position || (index + 1);
         let rankBadgeClass = '';
         let rankContent = '';
 
@@ -893,6 +893,14 @@ function getAvatarSVG(name, isWinning) {
         svg += `<path d="M 24 55 C 24 74, 76 74, 76 55 L 70 55 C 70 66, 30 66, 30 55 Z" fill="${theme.hair}"/>`;
     } else if (theme.hairStyle === 'long') {
         svg += `<path d="M 22 43 C 22 18, 78 18, 78 43 C 78 63, 72 75, 72 75 L 67 75 C 67 55, 33 55, 33 75 L 28 75 C 28 75, 22 63, 22 43 Z" fill="${theme.hair}"/>`;
+        // Moño/bow + pestañas para estilo femenino
+        svg += `<path d="M 72 28 Q 78 22 82 28 Q 78 34 72 28 Z" fill="#f9a8d4"/>`;
+        svg += `<circle cx="74" cy="28" r="2.5" fill="#ec4899"/>`;
+        // Pestañas
+        svg += `<path d="M 30 46 Q 28 42 26 44" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+        svg += `<path d="M 34 44 Q 32 40 30 42" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+        svg += `<path d="M 70 46 Q 72 42 74 44" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
+        svg += `<path d="M 66 44 Q 68 40 70 42" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
     } else if (theme.hairStyle === 'cap') {
         svg += `<path d="M 24 45 C 24 35, 76 35, 76 45 Z" fill="${theme.hair}"/>`;
         // Cap
