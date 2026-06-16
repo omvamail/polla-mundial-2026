@@ -1,46 +1,78 @@
-/* Design System: Quiniela Mundial 2026 */
+/* Design System: Quiniela Mundial 2026 — World Cup 2026 Edition */
 
 :root {
     --bg-app: #030712;
     --bg-card: rgba(17, 24, 39, 0.6);
     --bg-card-hover: rgba(31, 41, 55, 0.7);
-    --bg-nav: rgba(3, 7, 18, 0.8);
+    --bg-nav: rgba(3, 7, 18, 0.85);
     --text-main: #f9fafb;
     --text-muted: #9ca3af;
     --text-inactive: #4b5563;
-    
+
+    /* World Cup 2026 Color Palette */
+    --wc-gold: #fbbf24;
+    --wc-gold-light: #fde68a;
+    --wc-gold-dark: #d97706;
+    --wc-navy: #1e3a8a;
+    --wc-red: #ef4444;
+    --wc-green: #10b981;
+    --wc-purple: #7c3aed;
+    --wc-teal: #0d9488;
+
     --primary: #3b82f6;
     --primary-light: #60a5fa;
-    --primary-dark: #1d4ed8;
+    --primary-dark: #2563eb;
     --primary-dim: rgba(59, 130, 246, 0.15);
     --primary-gradient: linear-gradient(135deg, #3b82f6, #1d4ed8);
     --primary-glow: 0 0 20px rgba(59, 130, 246, 0.4);
-    
+
+    /* World Cup multi-color gradient */
+    --wc-multigrad: linear-gradient(135deg, #1e3a8a, #7c3aed, #ef4444, #f59e0b, #10b981);
+    --wc-multigrad-2: linear-gradient(135deg, #fbbf24, #ef4444, #3b82f6, #10b981);
+
     --success: #10b981;
     --success-dim: rgba(16, 185, 129, 0.12);
     --success-border: rgba(16, 185, 129, 0.3);
-    
+
     --danger: #ef4444;
     --danger-dim: rgba(239, 68, 68, 0.12);
     --danger-border: rgba(239, 68, 68, 0.3);
-    
+
     --warning: #f59e0b;
     --warning-dim: rgba(245, 158, 11, 0.12);
-    
+
     --neutral-dim: rgba(156, 163, 175, 0.1);
-    
+
     --border: rgba(255, 255, 255, 0.08);
     --border-light: rgba(255, 255, 255, 0.15);
-    
+
     --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
     --blur: blur(16px);
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 20px;
-    
+
     --gold-gradient: linear-gradient(135deg, #fbbf24, #d97706);
     --silver-gradient: linear-gradient(135deg, #9ca3af, #4b5563);
     --bronze-gradient: linear-gradient(135deg, #b45309, #78350f);
+}
+
+/* Animated background pattern — subtle stars */
+.app-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(251, 191, 36, 0.15), transparent),
+        radial-gradient(1px 1px at 30% 60%, rgba(59, 130, 246, 0.12), transparent),
+        radial-gradient(1.5px 1.5px at 50% 10%, rgba(239, 68, 68, 0.1), transparent),
+        radial-gradient(1px 1px at 70% 40%, rgba(16, 185, 129, 0.1), transparent),
+        radial-gradient(1px 1px at 90% 80%, rgba(251, 191, 36, 0.12), transparent),
+        radial-gradient(1.5px 1.5px at 20% 90%, rgba(124, 58, 237, 0.08), transparent),
+        radial-gradient(1px 1px at 80% 15%, rgba(251, 191, 36, 0.1), transparent),
+        radial-gradient(1px 1px at 45% 45%, rgba(59, 130, 246, 0.08), transparent);
+    pointer-events: none;
+    z-index: 0;
 }
 
 /* Base resets & box sizing */
@@ -79,7 +111,7 @@ html, body {
 /* App Header styling */
 .app-header {
     height: 64px;
-    padding: 0 20px;
+    padding: 0 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,13 +127,45 @@ html, body {
     gap: 10px;
 }
 
-.header-logo h1 {
-    font-size: 1.15rem;
+/* World Cup 2026 Emblem SVG */
+.wc-emblem {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    animation: emblemGlow 3s ease-in-out infinite;
+}
+
+.wc-emblem-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.3));
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.header-text h1 {
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    background: linear-gradient(to right, #ffffff, #9ca3af);
+    letter-spacing: 0.3px;
+    background: var(--wc-multigrad);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.header-sub {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--wc-gold);
+    opacity: 0.8;
 }
 
 .header-trophy {
@@ -112,13 +176,14 @@ html, body {
 }
 
 .header-stats {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 600;
     background: var(--primary-dim);
     color: var(--primary-light);
     padding: 4px 10px;
     border-radius: var(--radius-sm);
     border: 1px solid rgba(59, 130, 246, 0.2);
+    white-space: nowrap;
 }
 
 /* Main content scroll area */
@@ -192,12 +257,12 @@ html, body {
 }
 
 .nav-btn.active {
-    color: var(--primary-light);
+    color: var(--wc-gold);
 }
 
 .nav-btn.active i {
     transform: translateY(-2px);
-    filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.4));
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.4));
 }
 
 .nav-btn.active::after {
@@ -206,9 +271,9 @@ html, body {
     top: 0;
     width: 24px;
     height: 3px;
-    background-color: var(--primary);
+    background: var(--wc-multigrad);
     border-radius: 0 0 3px 3px;
-    box-shadow: 0 0 10px var(--primary);
+    box-shadow: 0 0 10px var(--wc-gold);
 }
 
 /* Title wrapper */
@@ -353,7 +418,7 @@ html, body {
     font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--primary-light);
+    color: var(--wc-gold);
     font-weight: 700;
 }
 
@@ -435,10 +500,10 @@ html, body {
 }
 
 .group-tab-btn.active {
-    background: var(--primary-gradient);
+    background: var(--wc-multigrad);
     color: #ffffff;
     border-color: transparent;
-    box-shadow: var(--primary-glow);
+    box-shadow: 0 0 16px rgba(251, 191, 36, 0.3);
 }
 
 /* Matches View Selector (By Group / By Date) */
@@ -475,9 +540,9 @@ html, body {
 }
 
 .view-btn.active {
-    background: var(--primary-gradient);
+    background: var(--wc-multigrad);
     color: #ffffff;
-    box-shadow: var(--primary-glow);
+    box-shadow: 0 0 14px rgba(251, 191, 36, 0.25);
 }
 
 .date-section-header {
@@ -818,9 +883,9 @@ html, body {
 }
 
 .btn-primary {
-    background: var(--primary-gradient);
+    background: linear-gradient(135deg, #1e3a8a, #7c3aed);
     color: #ffffff;
-    box-shadow: var(--primary-glow);
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
 }
 
 .btn-primary:hover {
@@ -1263,10 +1328,10 @@ select option {
 }
 
 .badge-glow {
-    background-color: var(--primary-dim);
-    color: var(--primary-light);
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.15);
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15), rgba(239, 68, 68, 0.1));
+    color: var(--wc-gold);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.15);
 }
 
 /* Animations */
@@ -1304,6 +1369,12 @@ select option {
     0% { transform: translateY(0) rotate(-3deg); }
     50% { transform: translateY(-4px) rotate(3deg); }
     100% { transform: translateY(0) rotate(-3deg); }
+}
+
+@keyframes emblemGlow {
+    0% { filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.2)); }
+    50% { filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.5)); }
+    100% { filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.2)); }
 }
 
 /* Responsive constraints */
