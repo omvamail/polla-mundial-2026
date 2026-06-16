@@ -9,3 +9,9 @@ __pycache__/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+
+# Carpeta fuente de fotos (ya copiadas a static/fotos/)
+/Fotos/
+
+# Scripts de prueba
+/scratch/

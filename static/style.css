@@ -450,6 +450,27 @@ html, body {
     height: 100%;
 }
 
+/* Photo avatars (reemplazan los SVG) */
+.avatar-wrapper.photo-avatar {
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+}
+
+.player-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pred-photo-img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
 /* Floating crown animation */
 .avatar-crown {
     position: absolute;

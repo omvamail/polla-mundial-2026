@@ -71,6 +71,22 @@ const PLAYER_CONFIG = {
     'Duvan': { bg: '#9333ea', hair: '#581c87', skin: '#ffedd5', hairStyle: 'curly' }
 };
 
+// Photos reales de cada participante (feliz = en primer lugar, triste = no)
+const PHOTO_MAP = {
+    'Deivid':    { feliz: 'fotos/Deivid_feliz.png',    triste: 'fotos/Deivid_triste.png' },
+    'Cesar':     { feliz: 'fotos/Cesar_feliz.png',     triste: 'fotos/Cesar_triste.png' },
+    'Ferney':    { feliz: 'fotos/Ferney_feliz.png',    triste: 'fotos/Ferney_triste.png' },
+    'Edisabet':  { feliz: 'fotos/Edisabet_feliz.png',  triste: 'fotos/Edisabet_triste.png' },
+    'Jhair':     { feliz: 'fotos/Jhair_feliz.png',     triste: 'fotos/Jhair_triste.png' },
+    'Duvan':     { feliz: 'fotos/Duvan_feliz.png',     triste: 'fotos/Duvan_triste.png' }
+};
+
+function getPlayerPhoto(name, isHappy) {
+    const p = PHOTO_MAP[name];
+    if (!p) return '';
+    return isHappy ? p.feliz : p.triste;
+}
+
 // Date translation map
 const DATE_TRANSLATIONS = {
     '2026-06-11': 'Jueves 11 de Junio',
@@ -373,9 +389,8 @@ function createMatchCard(match, showFullDateInHeader = true) {
     // Predictions list
     let predictionsHtml = '';
     Object.entries(match.predictions).forEach(([player, pInfo]) => {
-        const playerConfig = PLAYER_CONFIG[player] || { bg: '#9ca3af' };
         const statusClass = pInfo.status;
-        
+
         let statusIcon = '';
         if (pInfo.status === 'correct') {
             statusIcon = '<i class="fa-solid fa-circle-check pred-indicator correct-icon"></i>';
@@ -397,8 +412,8 @@ function createMatchCard(match, showFullDateInHeader = true) {
 
         predictionsHtml += `
             <div class="prediction-item ${statusClass}">
-                <div class="pred-user-avatar" style="background-color: ${playerConfig.bg}; overflow:hidden;">
-                    ${getMiniAvatarSVG(player, player.is_leader)}
+                <div class="pred-user-avatar" style="overflow:hidden;">
+                    ${getMiniAvatarSVG(player, false)}
                 </div>
                 <div class="pred-details">
                     <span class="pred-user-name">${player}</span>
@@ -863,140 +878,38 @@ function getFlagImg(teamName) {
     return `<img src="https://flagcdn.com/w80/${code}.png" alt="${teamName} Flag" class="flag-img" onerror="this.style.display='none'">`;
 }
 
-// Generates the customized SVG profile avatar for each player
+// Generates the player photo avatar (feliz si es lider, triste si no)
 function getAvatarSVG(name, isWinning) {
-    const theme = PLAYER_CONFIG[name] || { bg: '#4b5563', hair: '#1f2937', skin: '#f3f4f6', hairStyle: 'normal' };
-    
-    let svg = `<svg viewBox="0 0 100 100" class="player-avatar-svg" xmlns="http://www.w3.org/2000/svg">`;
-    
-    // Background Circle
-    svg += `<circle cx="50" cy="50" r="46" fill="${theme.bg}" opacity="0.8"/>`;
-    svg += `<circle cx="50" cy="50" r="44" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>`;
-    
-    // Face Skin
-    svg += `<circle cx="50" cy="53" r="28" fill="${theme.skin}"/>`;
-    
-    // Hair Styles
-    if (theme.hairStyle === 'spiky') {
-        svg += `<path d="M 25 35 L 30 18 L 38 27 L 50 14 L 62 27 L 70 18 L 75 35 Z" fill="${theme.hair}"/>`;
-    } else if (theme.hairStyle === 'glasses') {
-        svg += `<path d="M 22 45 C 22 25, 78 25, 78 45 C 78 45, 74 30, 50 30 C 26 30, 22 45, 22 45 Z" fill="${theme.hair}"/>`;
-        // Glasses frames
-        svg += `<circle cx="38" cy="50" r="7" fill="none" stroke="#111827" stroke-width="2.5"/>`;
-        svg += `<circle cx="62" cy="50" r="7" fill="none" stroke="#111827" stroke-width="2.5"/>`;
-        svg += `<line x1="45" y1="50" x2="55" y2="50" stroke="#111827" stroke-width="2.5"/>`;
-        svg += `<line x1="22" y1="50" x2="31" y2="50" stroke="#111827" stroke-width="2"/>`;
-        svg += `<line x1="69" y1="50" x2="78" y2="50" stroke="#111827" stroke-width="2"/>`;
-    } else if (theme.hairStyle === 'beard') {
-        svg += `<path d="M 22 45 C 22 25, 78 25, 78 45 Z" fill="${theme.hair}"/>`;
-        // Beard
-        svg += `<path d="M 24 55 C 24 74, 76 74, 76 55 L 70 55 C 70 66, 30 66, 30 55 Z" fill="${theme.hair}"/>`;
-    } else if (theme.hairStyle === 'long') {
-        svg += `<path d="M 22 43 C 22 18, 78 18, 78 43 C 78 63, 72 75, 72 75 L 67 75 C 67 55, 33 55, 33 75 L 28 75 C 28 75, 22 63, 22 43 Z" fill="${theme.hair}"/>`;
-        // Moño/bow + pestañas para estilo femenino
-        svg += `<path d="M 72 28 Q 78 22 82 28 Q 78 34 72 28 Z" fill="#f9a8d4"/>`;
-        svg += `<circle cx="74" cy="28" r="2.5" fill="#ec4899"/>`;
-        // Pestañas
-        svg += `<path d="M 30 46 Q 28 42 26 44" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
-        svg += `<path d="M 34 44 Q 32 40 30 42" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
-        svg += `<path d="M 70 46 Q 72 42 74 44" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
-        svg += `<path d="M 66 44 Q 68 40 70 42" stroke="#111827" stroke-width="1.5" fill="none" stroke-linecap="round"/>`;
-    } else if (theme.hairStyle === 'cap') {
-        svg += `<path d="M 24 45 C 24 35, 76 35, 76 45 Z" fill="${theme.hair}"/>`;
-        // Cap
-        svg += `<path d="M 22 42 C 22 23, 78 23, 78 42 Z" fill="#ef4444"/>`;
-        svg += `<path d="M 15 42 L 85 42 C 85 42, 80 37, 50 37 C 20 37, 15 42, 15 42 Z" fill="#dc2626"/>`;
-    } else if (theme.hairStyle === 'curly') {
-        svg += `<circle cx="30" cy="35" r="10" fill="${theme.hair}"/>`;
-        svg += `<circle cx="42" cy="27" r="10" fill="${theme.hair}"/>`;
-        svg += `<circle cx="58" cy="27" r="10" fill="${theme.hair}"/>`;
-        svg += `<circle cx="70" cy="35" r="10" fill="${theme.hair}"/>`;
-        svg += `<circle cx="34" cy="46" r="9" fill="${theme.hair}"/>`;
-        svg += `<circle cx="66" cy="46" r="9" fill="${theme.hair}"/>`;
-        svg += `<path d="M 25 45 C 25 30, 75 30, 75 45 Z" fill="${theme.hair}"/>`;
-    }
-    
-    // Expressions
-    if (isWinning) {
-        if (theme.hairStyle !== 'glasses') {
-            svg += `<path d="M 33 49 Q 38 43 43 49" stroke="#111827" stroke-width="3" fill="none" stroke-linecap="round"/>`;
-            svg += `<path d="M 57 49 Q 62 43 67 49" stroke="#111827" stroke-width="3" fill="none" stroke-linecap="round"/>`;
-        } else {
-            svg += `<path d="M 34 50 Q 38 46 42 50" stroke="#111827" stroke-width="2" fill="none" stroke-linecap="round"/>`;
-            svg += `<path d="M 58 50 Q 62 46 66 50" stroke="#111827" stroke-width="2" fill="none" stroke-linecap="round"/>`;
-        }
-        // Rosy cheeks
-        svg += `<circle cx="28" cy="56" r="4" fill="#f43f5e" opacity="0.3"/>`;
-        svg += `<circle cx="72" cy="56" r="4" fill="#f43f5e" opacity="0.3"/>`;
-        // Smile
-        svg += `<path d="M 38 58 Q 50 72 62 58 Z" fill="#111827"/>`;
-        svg += `<path d="M 41 59 Q 50 63 59 59 Z" fill="#ffffff"/>`;
-    } else {
-        if (theme.hairStyle !== 'glasses') {
-            svg += `<circle cx="37" cy="48" r="3" fill="#111827"/>`;
-            svg += `<circle cx="63" cy="48" r="3" fill="#111827"/>`;
-            svg += `<path d="M 31 43 L 41 45" stroke="#111827" stroke-width="2" stroke-linecap="round"/>`;
-            svg += `<path d="M 69 43 L 59 45" stroke="#111827" stroke-width="2" stroke-linecap="round"/>`;
-        } else {
-            svg += `<circle cx="38" cy="50" r="2.2" fill="#111827"/>`;
-            svg += `<circle cx="62" cy="50" r="2.2" fill="#111827"/>`;
-            svg += `<path d="M 33 44 L 41 46" stroke="#111827" stroke-width="1.5"/>`;
-            svg += `<path d="M 67 44 L 59 46" stroke="#111827" stroke-width="1.5"/>`;
-        }
-        // Frown
-        svg += `<path d="M 42 63 Q 50 56 58 63" stroke="#111827" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
-        // Teardrop
-        svg += `<path d="M 63 54 C 63 56.2 61.8 57 61 57 C 60.2 57 59 56.2 59 54 C 59 52 61 50 61 50 C 61 50 63 52 63 54 Z" fill="#60a5fa"/>`;
-    }
-    
-    svg += `</svg>`;
-    
+    const src = getPlayerPhoto(name, isWinning);
+    if (!src) return '<div class="avatar-wrapper"></div>';
+
     if (isWinning) {
         return `
-            <div class="avatar-wrapper">
+            <div class="avatar-wrapper photo-avatar">
+                <img src="${src}" alt="${name}" class="player-photo-img" loading="lazy">
                 <svg class="avatar-crown" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 17L5 7L10 12L12 5L14 12L19 7L22 17H2Z" fill="url(#crownGold)" stroke="#d97706" stroke-width="1"/>
                     <rect x="2" y="17" width="20" height="2" rx="0.5" fill="#d97706"/>
-                    <circle cx="2" cy="17" r="1" fill="#fff"/>
-                    <circle cx="22" cy="17" r="1" fill="#fff"/>
-                    <circle cx="12" cy="4" r="1.5" fill="#fff"/>
-                    <circle cx="5" cy="6" r="1" fill="#fff"/>
+                    <circle cx="2" cy="17" r="1" fill="#fff"/><circle cx="22" cy="17" r="1" fill="#fff"/>
+                    <circle cx="12" cy="4" r="1.5" fill="#fff"/><circle cx="5" cy="6" r="1" fill="#fff"/>
                     <circle cx="19" cy="6" r="1" fill="#fff"/>
                     <defs>
                         <linearGradient id="crownGold" x1="12" y1="4" x2="12" y2="19" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#fbbf24"/>
-                            <stop offset="1" stop-color="#d97706"/>
+                            <stop stop-color="#fbbf24"/><stop offset="1" stop-color="#d97706"/>
                         </linearGradient>
                     </defs>
                 </svg>
-                ${svg}
             </div>`;
     } else {
-        return `<div class="avatar-wrapper">${svg}</div>`;
+        return `<div class="avatar-wrapper photo-avatar">
+            <img src="${src}" alt="${name}" class="player-photo-img" loading="lazy">
+        </div>`;
     }
 }
 
-// Helper: Generates a very small SVG avatar (used in predictions list)
+// Helper: Mini foto para lista de predicciones
 function getMiniAvatarSVG(name, isWinning) {
-    const theme = PLAYER_CONFIG[name] || { bg: '#4b5563', hair: '#1f2937', skin: '#f3f4f6', hairStyle: 'normal' };
-    
-    let svg = `<svg viewBox="0 0 100 100" class="player-avatar-svg" xmlns="http://www.w3.org/2000/svg">`;
-    svg += `<circle cx="50" cy="50" r="48" fill="${theme.bg}"/>`;
-    svg += `<circle cx="50" cy="55" r="28" fill="${theme.skin}"/>`;
-    
-    // Draw hair simplified
-    svg += `<path d="M 22 48 C 22 25, 78 25, 78 48 Z" fill="${theme.hair}"/>`;
-    
-    // Draw simple smile or frown
-    if (isWinning) {
-        svg += `<circle cx="36" cy="48" r="4" fill="#111827"/>`;
-        svg += `<circle cx="64" cy="48" r="4" fill="#111827"/>`;
-        svg += `<path d="M 40 60 Q 50 70 60 60" stroke="#111827" stroke-width="4" fill="none" stroke-linecap="round"/>`;
-    } else {
-        svg += `<circle cx="36" cy="48" r="3.5" fill="#111827"/>`;
-        svg += `<circle cx="64" cy="48" r="3.5" fill="#111827"/>`;
-        svg += `<path d="M 42 64 Q 50 58 58 64" stroke="#111827" stroke-width="4" fill="none" stroke-linecap="round"/>`;
-    }
-    svg += `</svg>`;
-    return svg;
+    const src = getPlayerPhoto(name, isWinning);
+    if (!src) return '';
+    return `<img src="${src}" alt="${name}" class="pred-photo-img" loading="lazy">`;
 }
