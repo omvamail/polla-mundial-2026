@@ -126,5 +126,9 @@
     "25": {
         "goles_local": 0,
         "goles_visitante": 1
+    },
+    "40": {
+        "goles_local": 5,
+        "goles_visitante": 1
     }
 }
