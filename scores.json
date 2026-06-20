@@ -114,5 +114,9 @@
     "18": {
         "goles_local": 0,
         "goles_visitante": 1
+    },
+    "19": {
+        "goles_local": 3,
+        "goles_visitante": 0
     }
 }
