@@ -206,5 +206,9 @@
     "21": {
         "goles_local": 4,
         "goles_visitante": 2
+    },
+    "6": {
+        "goles_local": 0,
+        "goles_visitante": 3
     }
 }
