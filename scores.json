@@ -238,5 +238,9 @@
     "42": {
         "goles_local": 1,
         "goles_visitante": 1
+    },
+    "62": {
+        "goles_local": 1,
+        "goles_visitante": 4
     }
 }
